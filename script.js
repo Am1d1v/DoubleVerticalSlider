@@ -20,23 +20,26 @@ const changeSlide = (direction) => {
     // Get slider height
     const sliderHeight = sliderContainer.clientHeight;
     
-    // Scroll UP
-    if(direction === 'up'){
+    // UP and DOWN scroll
+    if(direction === 'down'){
         activeSlideIndex++;
         if(activeSlideIndex > slidesLenght - 1){
             activeSlideIndex = 0;
         }
-    }
-
-    // Scroll DOWN
-    if(direction === 'down'){
+    } else if(direction === 'up'){
         activeSlideIndex--;
         if(activeSlideIndex < 0){
             activeSlideIndex = slidesLenght - 1;
         }
     }
 
-    rightSlide.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`;
+    
+
+    // Right side scroll images
+    rightSlide.style.transform = `translateY(-${activeSlideIndex * 100}vh)`;
+
+    // Left side scroll text content
+    leftSlide.style.transform = `translateY(-${activeSlideIndex * 100}vh)`;
 }
 
 
