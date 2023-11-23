@@ -16,6 +16,28 @@ body {
 }
 .slider-container .action-buttons button {
   position: absolute;
+  top: 50%;
+  left: 30%;
+  z-index: 100;
+  background-color: #fff;
+  color: #aaa;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+}
+.slider-container .action-buttons button:hover {
+  color: #222;
+}
+.slider-container .action-buttons .button-down {
+  transform: translateX(-100%);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.slider-container .action-buttons .button-up {
+  transform: translateY(-100%);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .slide-left {
